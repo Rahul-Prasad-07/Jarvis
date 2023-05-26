@@ -56,6 +56,12 @@ def askJarvis(question):
 while True:
     inputText = audioTOtext()
     print(inputText)
+
+    if inputText.lower() == "stop" or inputText.lower() == "exit":
+        speak("Thank you for using Jarvis. Have a nice day! Mr Rahul")
+        break
+     
+    
     outputText = askJarvis(inputText)
     print(outputText)
     speak(outputText)
